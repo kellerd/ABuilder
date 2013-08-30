@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ABuilder" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ABuilderContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SingleModels" EntityType="ABuilder.SingleModel" />
+    <EntitySet Name="Stats" EntityType="ABuilder.Stat" />
+    <EntitySet Name="SingleModel_Stat" EntityType="ABuilder.SingleModel_Stat" />
+    <AssociationSet Name="StatSingleModel_Stat" Association="ABuilder.StatSingleModel_Stat">
+      <End Role="Stat" EntitySet="Stats" />
+      <End Role="SingleModel_Stat" EntitySet="SingleModel_Stat" />
+    </AssociationSet>
+    <AssociationSet Name="SingleModelSingleModel_Stat" Association="ABuilder.SingleModelSingleModel_Stat">
+      <End Role="SingleModel" EntitySet="SingleModels" />
+      <End Role="SingleModel_Stat" EntitySet="SingleModel_Stat" />
+    </AssociationSet>
+    <EntitySet Name="Equations" EntityType="ABuilder.Equation" />
+  </EntityContainer>
+  <EntityType Name="SingleModel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Stats" Relationship="ABuilder.SingleModelSingleModel_Stat" FromRole="SingleModel" ToRole="SingleModel_Stat" />
+  </EntityType>
+  <EntityType Name="Stat">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Acronym" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SingleModel_Stat">
+    <Key>
+      <PropertyRef Name="SingleModelId" />
+      <PropertyRef Name="StatId" />
+    </Key>
+    <Property Type="Int32" Name="SingleModelId" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <NavigationProperty Name="Stat" Relationship="ABuilder.StatSingleModel_Stat" FromRole="SingleModel_Stat" ToRole="Stat" />
+    <Property Type="Int16" Name="Value" Nullable="false" />
+    <Property Type="Int32" Name="StatId" Nullable="false" />
+  </EntityType>
+  <Association Name="StatSingleModel_Stat">
+    <End Type="ABuilder.Stat" Role="Stat" Multiplicity="1" />
+    <End Type="ABuilder.SingleModel_Stat" Role="SingleModel_Stat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stat">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SingleModel_Stat">
+        <PropertyRef Name="StatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SingleModelSingleModel_Stat">
+    <End Type="ABuilder.SingleModel" Role="SingleModel" Multiplicity="1" />
+    <End Type="ABuilder.SingleModel_Stat" Role="SingleModel_Stat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SingleModel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SingleModel_Stat">
+        <PropertyRef Name="SingleModelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Equation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Value" Nullable="false" />
+  </EntityType>
+</Schema>

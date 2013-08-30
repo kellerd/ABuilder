@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    @System.Web.Optimization.Styles.Render("~/Content/bootstrap")
+
+    <title>@ViewBag.Title</title>
+</head>
+    
+  <body style="margin-bottom:40px;">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse  navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="Home/Index">ABuilder</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="Home/Index">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>@ViewBag.Title</h1>
+  </div>
+</header>
+
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span2">
+        @Html.Partial("Navigation")
+      </div>
+      <div class="span10">
+
+
+          @RenderBody()
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>For 40k Calculations</p>
+      </div>
+    </footer>
+
+    @System.Web.Optimization.Scripts.Render("~/bundles/jquery")
+      @System.Web.Optimization.Scripts.Render("~/bundles/knockout")
+    @System.Web.Optimization.Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

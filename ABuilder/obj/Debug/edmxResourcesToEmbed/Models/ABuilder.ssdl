@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ABuilder.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ABuilderStoreContainer">
+    <EntitySet Name="SingleModels" EntityType="ABuilder.Store.SingleModels" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Stats" EntityType="ABuilder.Store.Stats" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SingleModel_Stat" EntityType="ABuilder.Store.SingleModel_Stat" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Equations" EntityType="ABuilder.Store.Equations" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="StatSingleModel_Stat" Association="ABuilder.Store.StatSingleModel_Stat">
+      <End Role="Stat" EntitySet="Stats" />
+      <End Role="SingleModel_Stat" EntitySet="SingleModel_Stat" />
+    </AssociationSet>
+    <AssociationSet Name="SingleModelSingleModel_Stat" Association="ABuilder.Store.SingleModelSingleModel_Stat">
+      <End Role="SingleModel" EntitySet="SingleModels" />
+      <End Role="SingleModel_Stat" EntitySet="SingleModel_Stat" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="SingleModels">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Stats">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Acronym" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SingleModel_Stat">
+    <Key>
+      <PropertyRef Name="SingleModelId" />
+      <PropertyRef Name="StatId" />
+    </Key>
+    <Property Name="SingleModelId" Type="int" Nullable="false" />
+    <Property Name="Value" Type="smallint" Nullable="false" />
+    <Property Name="StatId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Equations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="StatSingleModel_Stat">
+    <End Role="Stat" Type="ABuilder.Store.Stats" Multiplicity="1" />
+    <End Role="SingleModel_Stat" Type="ABuilder.Store.SingleModel_Stat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stat">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SingleModel_Stat">
+        <PropertyRef Name="StatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SingleModelSingleModel_Stat">
+    <End Role="SingleModel" Type="ABuilder.Store.SingleModels" Multiplicity="1" />
+    <End Role="SingleModel_Stat" Type="ABuilder.Store.SingleModel_Stat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SingleModel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SingleModel_Stat">
+        <PropertyRef Name="SingleModelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

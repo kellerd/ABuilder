@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ABuilderStoreContainer" CdmEntityContainer="ABuilderContainer">
+    <EntitySetMapping Name="SingleModels">
+      <EntityTypeMapping TypeName="IsTypeOf(ABuilder.SingleModel)">
+        <MappingFragment StoreEntitySet="SingleModels">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stats">
+      <EntityTypeMapping TypeName="IsTypeOf(ABuilder.Stat)">
+        <MappingFragment StoreEntitySet="Stats">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SingleModel_Stat">
+      <EntityTypeMapping TypeName="IsTypeOf(ABuilder.SingleModel_Stat)">
+        <MappingFragment StoreEntitySet="SingleModel_Stat">
+          <ScalarProperty Name="SingleModelId" ColumnName="SingleModelId" />
+          <ScalarProperty Name="StatId" ColumnName="StatId" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equations">
+      <EntityTypeMapping TypeName="IsTypeOf(ABuilder.Equation)">
+        <MappingFragment StoreEntitySet="Equations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

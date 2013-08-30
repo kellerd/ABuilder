@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "ABuilder Calculate";
+}
+
+<section id="AddNew">
+    <div class="span-6">
+        <form class="navbar-search pull-left" data-bind="submit: addModel">
+            <input type="text" class="search-query" placeholder="Add New Model" data-bind="value: NewName">
+        </form>
+
+        <form class="navbar-search pull-left" data-bind="submit: addStat">
+            <input type="text" class="search-query" placeholder="Add New Statistic" data-bind="value: NewStat">
+        </form>
+    </div>
+    <div class="span10">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Options</th>
+                    <th>Name</th>
+                    <!-- ko foreach: Stats -->
+                    <th data-bind="text: Acronym"></th>
+                    <!-- /ko -->
+            </thead>
+            <tbody data-bind="foreach: SingleModels">
+                <tr>
+                    <td><a href="#" data-bind="click: $root.removeSingleModel.bind($data)" class="icon-minus-sign"></a></td>
+                    <td data-bind="text: Name"></td>
+                    <!-- ko foreach: $root.Stats -->
+                    <!-- ko ifnot: $root.displaySingleModelStat($parent, $data) -->
+                    <td><a href="#" data-bind="click: $root.addSingleModelStat.bind($data, $parent)" class="icon-plus-sign"></a></td>
+                    <!-- /ko -->
+                    <!-- ko if: $root.displaySingleModelStat($parent, $data) -->
+                    <!-- ko with: $root.getSingleModelStat($parent, $data) -->
+                    <td>
+                        <form data-bind="submit: saveItem">
+                            <a href="#" data-bind="text: Value, visible: !editable(), click: function () { editable(true) }, event: { focus: function () { editable(true) }}">&nbsp;</a>
+                            <input type="text" class="input-mini" data-bind="value: Value, visible: editable(), hasfocus: editable, selected: editable, event: { blur: saveItem }" />
+                        </form>
+                    </td>
+                    <!-- /ko -->
+                    <!-- /ko -->
+                    <!-- /ko -->
+                </tr>
+            </tbody>
+        </table>
+        <div class="span3">
+            <ul data-bind="foreach: Equations">
+                <li><a href="#" data-bind="click: $root.removeEquation.bind($data), visible: !editable()" class="icon-minus-sign"></a>
+                    <a href="#" data-bind="text: Value, visible: !editable(), click: function () { editable(true) }"></a>
+                    <input type="text" class="input-large" data-bind="value: Value, visible: editable(), hasfocus: editable, selected: editable, event: { blur: saveItem }" />
+                     = <span data-bind="text: evaluate, visible: !editable()"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="span7">
+            <form data-bind="submit: saveEquation">
+                <input type="hidden" data-bind="value: AddingFunction" />
+                <input type="text" class="input-large" data-bind="value: EquationText, visible: AddingFunction || EquationId" />
+                <a href="#" data-bind="click: function () { AddingFunction(true) }, visible: !AddingFunction()" class="icon-plus-sign"></a>
+                <a href="#" data-bind="visible: AddingFunction || EquationId, click: saveEquation" class="icon-check"></a>
+            </form>
+        </div>
+    </div>
+</section>
+@section scripts {
+    <script src="~/Scripts/app/Index.ViewModel.js"></script>
+    <script src="~/Scripts/app/Index.Initialize.js"></script>
+}
