@@ -11,13 +11,15 @@ namespace ABuilder.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
     
     public partial class SingleModel_Stat
     {
         public int SingleModelId { get; set; }
-        public short Value { get; set; }
-        public int StatId { get; set; }
+         public int StatId { get; set; }
     
+        public short Value { get; set; }
         public virtual Stat Stat { get; set; }
     }
 }

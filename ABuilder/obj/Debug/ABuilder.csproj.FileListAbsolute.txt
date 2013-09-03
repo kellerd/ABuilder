@@ -44,3 +44,44 @@ C:\Users\Dan\Documents\Visual Studio 2012\Projects\ABuilder\ABuilder\bin\Antlr3.
 C:\Users\Dan\Documents\Visual Studio 2012\Projects\ABuilder\ABuilder\bin\System.Net.Http.Extensions.xml
 C:\Users\Dan\Documents\Visual Studio 2012\Projects\ABuilder\ABuilder\bin\System.Net.Http.Primitives.xml
 C:\Users\Dan\Documents\Visual Studio 2012\Projects\ABuilder\ABuilder\obj\Debug\ABuilder.csproj.App.config
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\ABuilder.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\ABuilder.pdb
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\Antlr3.Runtime.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\EntityFramework.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\Glimpse.AspNet.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\Glimpse.Core.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\Glimpse.Mvc4.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\Microsoft.Web.Infrastructure.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\NCalc.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\Newtonsoft.Json.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Net.Http.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Net.Http.Formatting.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Net.Http.WebRequest.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.Helpers.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.Http.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.Http.WebHost.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.Mvc.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.Optimization.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.Razor.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.WebPages.Deployment.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.WebPages.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.WebPages.Razor.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\WebActivatorEx.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\WebGrease.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\Antlr3.Runtime.pdb
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\EntityFramework.xml
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\Newtonsoft.Json.xml
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Net.Http.xml
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Net.Http.Formatting.xml
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Net.Http.WebRequest.xml
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.Helpers.xml
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.Http.xml
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.Http.WebHost.xml
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.Mvc.xml
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.Razor.xml
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.WebPages.xml
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.WebPages.Deployment.xml
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\bin\System.Web.WebPages.Razor.xml
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\obj\Debug\ABuilder.dll
+C:\Documents and Settings\kellerd\My Documents\Visual Studio 2010\Projects\ABuilder\ABuilder\obj\Debug\ABuilder.pdb
